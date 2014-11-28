@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+	    设备视图
+        </title>
+        <link rel="stylesheet" href="/stylesheets/jquery.mobile-1.1.1.min.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="/javascripts/jquery.min.js">
+        </script>
+        <script src="/javascripts/jquery.mobile-1.1.1.min.js">
+        </script>
+        <script>
+        </script>
+	<script>
+	$('#ctrlPage').live('pageshow',function(event,ui){
+	    $.get('/control/ctrl', function(data){
+		$.each(data,function(index, item){
+		    alert(item);
+		    $li=$('<li/>');
+		    $a=$('<a/>');
+		    $a.attr({
+			"href":"#",
+			"data-id":item.id,
+			"data-password":item.password
+			}).html(item);
+		    $li.append($a);
+		    $('#devicelist').append($li);
+		    });
+		$('#devicelist').listview('refresh');
+		});
+	    });
+	</script>
+    </head>
+    <body>
+        <!-- Home -->
+<! ----------------------------------------------------------------------------------------------------------------- !>
+        <div data-role="page" data-back-btn-text="登出" data-add-back-btn="true" id="ctrlPage">
+            <div data-theme="a" data-role="header">
+                <h3>
+		    设备视图
+                </h3>
+            </div>
+            <div data-role="content">
+            <ul data-role="listview" data-inset="true"  id="devicelist">
+            </ul>
+
+	    <a href="/tags" data-role="button" data-theme="a">control</a>
+            </div>
+        </div>
+                <script>
+                </script>
+    </body>
+</html>

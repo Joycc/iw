@@ -1,0 +1,224 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+}
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: block;
+    padding: 70px 20px 20px;
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-left: -20px;
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+}
+.nav-sidebar > li > a {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.nav-sidebar > .active > a {
+  color: #fff;
+  background-color: #428bca;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.input-lable
+{
+  width:100px;
+  text-align:left;
+}
+
+.change-lable
+{
+  width:125px;
+  text-align:left;
+}
+
+.body-bg
+{
+  background-color: #e4e4e4;
+}
+
+.title-bg
+{
+  background-image: url(../img/title_bg.png);
+  background-size: cover;
+  height: 136px;
+  position: relative;
+  top:-50px;
+}
+
+.title-font
+{
+  color: #b7b7b7;
+  opacity: 0.7;
+  font-size: 30px;
+  position: fixed;
+}
+
+.navbar .container-fluid
+{
+background-image: url(../img/title_bg.png);
+height: 136px;
+background-size: cover;
+}
+
+.nav-font
+{
+  color:#fbe601;
+  opacity: 0.8;
+  font-size: 18px;
+  height: 40px;
+  background-color:#00383b;
+  opacity: 0.8;
+}
+
+.navbar-nav > li > a:hover
+{
+  color:white;
+  background-color:#00383b;
+  opacity: 0.8;
+}
+
+.nav-active
+{
+  color:white;
+  background-color:#00383b;
+  opacity: 0.8;
+}
+
+.tab-font
+{
+  color:#fbe601;
+  opacity: 0.6;
+  font-size: 15px;
+}
+
+.child-tab
+{
+  opacity: 0.8;
+  font-size: 15px;
+  color: #36648B;
+}
+
+.content
+{
+  margin-top: 80px;
+}
+
+.tab-pos
+{
+position: absolute;
+left: 100px;
+bottom:0;
+border: none;
+}
+
+.tab-pos > li > a:hover
+{
+  background: none;
+  color:white;
+  border: none;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus
+{
+  background: none;
+  color:white;
+  border: none;
+}
+
+#childNav > li.active > a,
+#childNav > li.active > a:hover,
+#childNav > li.active > a:focus
+{
+  background: #7D9EC0;
+  border: none;
+  color: #36648B;
+}
+
+#childNav
+{
+  border-bottom: 1px solid #36648B;
+}
+
+#childNav > li > a:hover
+{
+  background: none;
+  border: none;
+}
+
+.tab-tip
+{
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #e4e4e4;
+  position: absolute;
+  bottom: -12px;
+  left: 15px;
+}
+
+.icon-bar
+{
+    background-color: #fbe601;
+}
